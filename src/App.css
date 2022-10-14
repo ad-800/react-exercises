@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  border: 1px solid white;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: RGB(239, 215, 4);
+}
