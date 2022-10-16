@@ -20,7 +20,8 @@ class App extends Component {
             <Link to="/exercise-one">Exercise 1</Link> |{" "}
             <Link to="/exercise-two">Exercise 2</Link> |{" "}
             <Link to="/exercise-three">Exercise 3</Link> |{" "}
-            <Link to="/exercise-four">Exercise 4</Link>
+            <Link to="/exercise-four">Exercise 4</Link> |{" "}
+            <Link to="/exercise-five">Exercise 5</Link>
           </nav>
         </div>
       );
