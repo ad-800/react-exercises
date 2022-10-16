@@ -18,3 +18,11 @@
   align-items: center;
   background-color: RGB(239, 215, 4);
 }
+
+.button {
+  margin: 5px;
+}
+
+.left-centered {
+  text-align: left;
+}

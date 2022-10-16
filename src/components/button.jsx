@@ -8,7 +8,7 @@ class Button extends Component {
 
   render() {
     return (
-      <button onClick={(this.props.type === 'popup') ? this.handleClick : this.props.clickFunction}>Click Me {this.props.input}</button>
+      <button className="button" onClick={(this.props.type === 'popup') ? this.handleClick : this.props.clickFunction}>Click Me {this.props.input}</button>
     );
   }
 }
