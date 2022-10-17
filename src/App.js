@@ -8,8 +8,10 @@ import ClickList from './components/click-list';
 import Counter from './components/counter';
 import List from './components/list';
 import Form from './components/form';
+import StyledList from './components/styled-list';
 
 import './App.css';
+import jokes from './data/jokes';
 
 class App extends Component {
   render() {
@@ -24,7 +26,9 @@ class App extends Component {
             <Link to="/exercise-three">Exercise 3</Link> |{" "}
             <Link to="/exercise-four">Exercise 4</Link> |{" "}
             <Link to="/exercise-five">Exercise 5</Link> |{" "}
-            <Link to="/exercise-six">Exercise 6</Link>
+            <Link to="/exercise-six">Exercise 6</Link> |{" "}
+            <Link to="/exercise-seven">Exercise 7</Link> |{" "}
+            <Link to="/exercise-eight">Exercise 8</Link>
           </nav>
         </div>
       );
@@ -35,15 +39,17 @@ class App extends Component {
       <Router>
         <Header></Header>
         <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/exercise-one" element={<Hello name="World" />} />
-          <Route path="/exercise-two" element={<ClickList buttons={['']}/>} />
-          <Route path="/exercise-three" element={<ClickList buttons={['1', '2', '3']}/>} />
-          <Route path="/exercise-four" element={<Counter />} />
-          <Route path="/exercise-five" element={<List items={['🐶 dog', '🐱 cat', '🐥 chicken', '🐮 cow', '🐑 sheep', '🐴 horse']}/>} />
-          <Route path="/exercise-six" element={<Form />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/exercise-one" element={<Hello name="World" />} />
+            <Route path="/exercise-two" element={<ClickList buttons={['']}/>} />
+            <Route path="/exercise-three" element={<ClickList buttons={['1', '2', '3']}/>} />
+            <Route path="/exercise-four" element={<Counter />} />
+            <Route path="/exercise-five" element={<List items={['🐶 dog', '🐱 cat', '🐥 chicken', '🐮 cow', '🐑 sheep', '🐴 horse']}/>} />
+            <Route path="/exercise-six" element={<Form />} />
+            <Route path="/exercise-seven" element={<StyledList data={jokes} />} />
+            <Route path="/exercise-eight" element={<StyledList data={jokes} />} />
+          </Routes>
         </div>
       </Router>
     </div>
