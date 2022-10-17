@@ -9,6 +9,7 @@ import Counter from './components/counter';
 import List from './components/list';
 import Form from './components/form';
 import StyledList from './components/styled-list';
+import Cards from './components/cards';
 
 import './App.css';
 import jokes from './data/jokes';
@@ -48,7 +49,7 @@ class App extends Component {
             <Route path="/exercise-five" element={<List items={['🐶 dog', '🐱 cat', '🐥 chicken', '🐮 cow', '🐑 sheep', '🐴 horse']}/>} />
             <Route path="/exercise-six" element={<Form />} />
             <Route path="/exercise-seven" element={<StyledList data={jokes} />} />
-            <Route path="/exercise-eight" element={<StyledList data={jokes} />} />
+            <Route path="/exercise-eight" element={<Cards />} />
           </Routes>
         </div>
       </Router>
