@@ -9,7 +9,7 @@ class StyledList extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='cards-container'>
         {this.renderJokes()}
       </div>
     )

@@ -10,7 +10,7 @@ class Button extends Component {
   }
 
   handleSubmit = (event) => {
-    alert(`Hello ${this.state.firstName} ${this.state.lastName}`)
+    alert(`Hello ${this.state.firstName} ${this.state.lastName}!`)
   }
 
   handleChange = (event) => {
@@ -19,10 +19,14 @@ class Button extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input name="firstName" type="text" value={this.state.firstName} onChange={this.handleChange} />
-        <input name="lastName" type="text" value={this.state.lastName} onChange={this.handleChange} />
-        <input type="submit" value="Greet Me" />
+      <form className="form" onSubmit={this.handleSubmit}>
+        <label>First Name
+          <input name="firstName" type="text" value={this.state.firstName} onChange={this.handleChange} />
+        </label>
+        <label>Last Name
+          <input name="lastName" type="text" value={this.state.lastName} onChange={this.handleChange} />
+        </label>
+        <input className="button" type="submit" value="Greet Me" />
       </form>
     );
   }

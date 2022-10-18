@@ -38,11 +38,11 @@ class Cards extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
+        <div className='cards-container'>
           {users.map(user => (
             <Card key={user.id} user={user} />
           ))}
-        </ul>
+        </div>
       )
     }
   }
