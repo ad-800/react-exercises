@@ -10,6 +10,7 @@ import List from './components/list';
 import Form from './components/form';
 import StyledList from './components/styled-list';
 import Cards from './components/cards';
+import Filter from './components/filter';
 
 import './App.css';
 import jokes from './data/jokes';
@@ -29,7 +30,8 @@ class App extends Component {
             <Link to="/exercise-five">Exercise 5</Link> |{" "}
             <Link to="/exercise-six">Exercise 6</Link> |{" "}
             <Link to="/exercise-seven">Exercise 7</Link> |{" "}
-            <Link to="/exercise-eight">Exercise 8</Link>
+            <Link to="/exercise-eight">Exercise 8</Link> |{" "}
+            <Link to="/exercise-nine">Exercise 9</Link>
           </nav>
         </div>
       );
@@ -50,6 +52,7 @@ class App extends Component {
             <Route path="/exercise-six" element={<Form />} />
             <Route path="/exercise-seven" element={<StyledList data={jokes} />} />
             <Route path="/exercise-eight" element={<Cards />} />
+            <Route path="/exercise-nine" element={<Filter />} />
           </Routes>
         </div>
       </Router>

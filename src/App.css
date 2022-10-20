@@ -79,6 +79,7 @@ input {
   margin: 1rem;
   background-color: #9DB5B2;
   max-width: 250px;
+  height: 150px;
 }
 
 .cards-container {
@@ -90,7 +91,26 @@ input {
 }
 
 .profile-cards {
-  border: 1px solid black;
   margin: 10px;
-  background-color: #9DB5B2;
+  height: 250px;
+  width: 200px;
+  list-style: none;
+}
+
+.profile-cards > img {
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #3B413C;
+}
+
+.profile-cards > h2 {
+  font-size: 16px;
+}
+
+.country-cards {
+  margin: 10px;
+  height: 325px;
+  width: 250px;
+  list-style: none;
+  border: 1px solid #3B413C;
 }
