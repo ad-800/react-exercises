@@ -16,6 +16,19 @@ import './App.css';
 import jokes from './data/jokes';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      items: ['🐶 dog', '🐱 cat', '🐥 chicken', '🐮 cow', '🐑 sheep', '🐴 horse']
+    }
+  }
+
+  handleSubmit = (newItem) => {
+    console.log('submitted')
+    const newList = this.state.items.concat(newItem);
+    this.setState({items: newList});
+  }
+
   render() {
     function Header() {
       return (
@@ -48,7 +61,7 @@ class App extends Component {
             <Route path="/exercise-two" element={<ClickList buttons={['']}/>} />
             <Route path="/exercise-three" element={<ClickList buttons={['1', '2', '3']}/>} />
             <Route path="/exercise-four" element={<Counter />} />
-            <Route path="/exercise-five" element={<List items={['🐶 dog', '🐱 cat', '🐥 chicken', '🐮 cow', '🐑 sheep', '🐴 horse']}/>} />
+            <Route path="/exercise-five" element={<List items={this.state.items} handleSubmit={this.handleSubmit}/>} />
             <Route path="/exercise-six" element={<Form />} />
             <Route path="/exercise-seven" element={<StyledList data={jokes} />} />
             <Route path="/exercise-eight" element={<Cards />} />
