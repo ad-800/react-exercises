@@ -11,6 +11,7 @@ import Form from './components/form';
 import StyledList from './components/styled-list';
 import Cards from './components/cards';
 import Filter from './components/filter';
+import Game from './components/game';
 
 import './App.css';
 import jokes from './data/jokes';
@@ -44,7 +45,8 @@ class App extends Component {
             <Link to="/exercise-six">Exercise 6</Link> |{" "}
             <Link to="/exercise-seven">Exercise 7</Link> |{" "}
             <Link to="/exercise-eight">Exercise 8</Link> |{" "}
-            <Link to="/exercise-nine">Exercise 9</Link>
+            <Link to="/exercise-nine">Exercise 9</Link> |{" "}
+            <Link to="/exercise-ten">Exercise 10</Link>
           </nav>
         </div>
       );
@@ -66,6 +68,7 @@ class App extends Component {
             <Route path="/exercise-seven" element={<StyledList data={jokes} />} />
             <Route path="/exercise-eight" element={<Cards />} />
             <Route path="/exercise-nine" element={<Filter />} />
+            <Route path="/exercise-ten" element={<Game />} />
           </Routes>
         </div>
       </Router>
