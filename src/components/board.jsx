@@ -12,7 +12,7 @@ class Board extends Component {
 
   handleClick(n) {
     const copy = this.state.board.slice();
-    if (!copy[n]) {
+    if (!copy[n] && !hasWinner(copy)) {
       copy[n] = this.state.turn ? 'X' : 'O';
       this.setState({board: copy, turn: !this.state.turn});
     }
@@ -23,9 +23,17 @@ class Board extends Component {
   }
 
   render() {
+    let status
+    const winner = hasWinner(this.state.board);
+    if (winner) {
+      status = `Winner is: ${winner}`
+    } else {
+      status = `Next Turn: ${this.state.turn ? 'X' : 'O'}`;
+    }
+
     return (
       <div>
-        <h2>Next Turn: {this.state.turn ? 'X' : 'O'}</h2>
+        <h2>{status}</h2>
         <div className='flex-board'>
           <div className='row'>
             {this.renderSquare(0)}
@@ -48,7 +56,7 @@ class Board extends Component {
   }
 }
 
-function winner(board) {
+function hasWinner(board) {
   const winningCombos = [
     [0, 4, 8],
     [0, 1, 2],
@@ -60,10 +68,13 @@ function winner(board) {
     [6, 7, 8]
   ];
 
-  winningCombos.forEach(combo => {
-    const [a, b, c] = combo;
-    if board[a]
-  });
+  for (let i = 0; i < winningCombos.length; i++) {
+    const [a, b, c] = winningCombos[i];
+    if ((board[a]) && (board[a] === board[b]) && (board[a] === board[c])) {
+      return board[a];
+    }
+  };
+  return null;
 }
 
 export default Board;
